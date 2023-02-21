@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace WpfApp5
+namespace WpfApp5.ViewModel
 {
     class Errorlist : INotifyPropertyChanged
     {
@@ -58,7 +58,7 @@ namespace WpfApp5
         public SolidColorBrush Status
         {
             get { return color; }
-            set { color = value; }
+            set { color = value;  OnPropertyChanged("Status"); }
         }
         public String Status_str
         {

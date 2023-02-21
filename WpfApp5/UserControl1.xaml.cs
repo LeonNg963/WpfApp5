@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp5.ViewModel;
 
 namespace WpfApp5
 {
@@ -20,10 +21,25 @@ namespace WpfApp5
     /// </summary>
     public partial class UserControl1 : UserControl
     {
-        public int type;
+        private Errorlist CAN_B1 = new Errorlist(null, false);
+        private Errorlist CAN_B2 = new Errorlist(null, false);
+        private Errorlist CAN_B3 = new Errorlist(null, false);
+        private Errorlist CAN_B4 = new Errorlist(null, false);
+        private Errorlist CAN_B5 = new Errorlist(null, false);
+        private Errorlist CAN_B6 = new Errorlist(null, false);
+        private Errorlist CAN_B7 = new Errorlist(null, false);
+        private Errorlist CAN_B8 = new Errorlist(null, false);
         public UserControl1()
         {
             InitializeComponent();
+            CAN_byte1.ItemsSource = CAN_B1.Children;
+            CAN_byte2.ItemsSource = CAN_B2.Children;
+            CAN_byte3.ItemsSource = CAN_B3.Children;
+            CAN_byte4.ItemsSource = CAN_B4.Children;
+            CAN_byte5.ItemsSource = CAN_B5.Children;
+            CAN_byte6.ItemsSource = CAN_B6.Children;
+            CAN_byte7.ItemsSource = CAN_B7.Children;
+            CAN_byte8.ItemsSource = CAN_B8.Children;
         }
 
         private void Button_CanPanel(object sender, RoutedEventArgs e)
@@ -65,5 +81,11 @@ namespace WpfApp5
                 }
             }
         }
+        
+        public void Add_new(string str, int byte_num)
+        {
+
+        }
+    
     }
 }

@@ -34,20 +34,20 @@
                 </Setter>
             </Style>
         </StackPanel.Resources>
-        <Button Content="Error" Margin="8,2,8,2"  Click="Button_CanPanel" Tag="Panel1" />
+        <Button Content="CAN" x:Name="CAN" Margin="8,2,8,2"  Click="Button_CanPanel" Tag="Panel1" />
         <StackPanel x:Name="Panel1" Visibility="Collapsed" Margin="15,2,8,2">
-            <Button  Content="Error1" Tag="Error1" Click="Button_CANbyte" FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
-            <ListView Margin="0,-2,0,2" x:Name="Error1" Visibility="Collapsed"  HorizontalAlignment="Center" >
+            <Button  x:Name="CAN_byte1_title" Content="Byte1" Tag="CAN_byte1" Click="Button_CANbyte" FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
+            <ListView Margin="0,-2,0,2" x:Name="CAN_byte1" Visibility="Collapsed"  HorizontalAlignment="Center" >
                 <ListView.View >
                     <GridView>
-                        <GridViewColumn Header="Title" Width="50">
+                        <GridViewColumn x:Name="CAN_byte1_itemWidth1" Header="Title" Width="50">
                             <GridViewColumn.CellTemplate >
                                 <DataTemplate>
                                     <Rectangle Fill="{Binding Status}" Height="8" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn  Width="Auto" Header="Status">
+                        <GridViewColumn x:Name="CAN_byte1_itemWidth2"  Width="Auto" Header="Status">
                             <GridViewColumn.CellTemplate >
                                 <DataTemplate>
                                     <Label  Content="{Binding ERROR}" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -57,18 +57,144 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button  Content="Error2" Tag="Error2" Click="Button_CANbyte"  FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
-            <ListView Margin="0,-2,0,2" x:Name="Error2" Visibility="Collapsed"  HorizontalAlignment="Center" >
+            <Button  x:Name="CAN_byte2_title" Content="Byte2"  Tag="CAN_byte2" Click="Button_CANbyte"  FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
+            <ListView Margin="0,-2,0,2" x:Name="CAN_byte2" Visibility="Collapsed"  HorizontalAlignment="Center" >
                 <ListView.View >
                     <GridView>
-                        <GridViewColumn Header="Title" Width="50">
+                        <GridViewColumn x:Name="CAN_byte2_itemWidth1" Header="Title" Width="50">
                             <GridViewColumn.CellTemplate >
                                 <DataTemplate>
                                     <Rectangle Fill="{Binding Status}" Height="8" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn  Width="Auto" Header="Status">
+                        <GridViewColumn x:Name="CAN_byte2_itemWidth2"  Width="Auto" Header="Status">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Label  Content="{Binding ERROR}" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button  x:Name="CAN_byte3_title" Content="Byte3"  Tag="CAN_byte3" Click="Button_CANbyte"  FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
+            <ListView Margin="0,-2,0,2" x:Name="CAN_byte3" Visibility="Collapsed"  HorizontalAlignment="Center" >
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn x:Name="CAN_byte3_itemWidth1" Header="Title" Width="50">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Rectangle Fill="{Binding Status}" Height="8" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="CAN_byte3_itemWidth2"  Width="Auto" Header="Status">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Label  Content="{Binding ERROR}" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button  x:Name="CAN_byte4_title" Content="Byte4"  Tag="CAN_byte4" Click="Button_CANbyte"  FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
+            <ListView Margin="0,-2,0,2" x:Name="CAN_byte4" Visibility="Collapsed"  HorizontalAlignment="Center" >
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn x:Name="CAN_byte4_itemWidth1" Header="Title" Width="50">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Rectangle Fill="{Binding Status}" Height="8" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="CAN_byte4_itemWidth2"  Width="Auto" Header="Status">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Label  Content="{Binding ERROR}" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button  x:Name="CAN_byte5_title" Content="Byte5"  Tag="CAN_byte5" Click="Button_CANbyte"  FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
+            <ListView Margin="0,-2,0,2" x:Name="CAN_byte5" Visibility="Collapsed"  HorizontalAlignment="Center" >
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn x:Name="CAN_byte5_itemWidth1" Header="Title" Width="50">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Rectangle Fill="{Binding Status}" Height="8" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="CAN_byte5_itemWidth2"  Width="Auto" Header="Status">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Label  Content="{Binding ERROR}" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button  x:Name="CAN_byte6_title" Content="Byte6"  Tag="CAN_byte6" Click="Button_CANbyte"  FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
+            <ListView Margin="0,-2,0,2" x:Name="CAN_byte6" Visibility="Collapsed"  HorizontalAlignment="Center" >
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn x:Name="CAN_byte6_itemWidth1" Header="Title" Width="50">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Rectangle Fill="{Binding Status}" Height="8" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="CAN_byte6_itemWidth2"  Width="Auto" Header="Status">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Label  Content="{Binding ERROR}" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button  x:Name="CAN_byte7_title" Content="Byte7"  Tag="CAN_byte7" Click="Button_CANbyte"  FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
+            <ListView Margin="0,-2,0,2" x:Name="CAN_byte7" Visibility="Collapsed"  HorizontalAlignment="Center" >
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn x:Name="CAN_byte7_itemWidth1" Header="Title" Width="50">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Rectangle Fill="{Binding Status}" Height="8" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="CAN_byte7_itemWidth2"  Width="Auto" Header="Status">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Label  Content="{Binding ERROR}" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button  x:Name="CAN_byte8_title" Content="Byte8"  Tag="CAN_byte8" Click="Button_CANbyte"  FontSize="15" Margin="0,2,0,2" BorderBrush="#99632727"/>
+            <ListView Margin="0,-2,0,2" x:Name="CAN_byte8" Visibility="Collapsed"  HorizontalAlignment="Center" >
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn x:Name="CAN_byte8_itemWidth1" Header="Title" Width="50">
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <Rectangle Fill="{Binding Status}" Height="8" Width="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn x:Name="CAN_byte8_itemWidth2"  Width="Auto" Header="Status">
                             <GridViewColumn.CellTemplate >
                                 <DataTemplate>
                                     <Label  Content="{Binding ERROR}" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center"/>
