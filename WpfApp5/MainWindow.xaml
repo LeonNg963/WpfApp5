@@ -6,9 +6,11 @@
         xmlns:local="clr-namespace:WpfApp5"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <StackPanel x:Name="testgrid"  Height="Auto">
+    <ScrollViewer>
+        <StackPanel>
+            <StackPanel x:Name="testgrid"  Height="Auto">
+            </StackPanel>
+            <Button Content="Button" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="242" Click="Button_Click"/>
         </StackPanel>
-        <Button Content="Button" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="242" Click="Button_Click"/>
-    </StackPanel>
+        </ScrollViewer>
 </Window>
