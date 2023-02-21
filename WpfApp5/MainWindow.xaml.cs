@@ -48,7 +48,7 @@ namespace WpfApp5
             Boolean next_can = true;
             Boolean next_byte = false;
 
-            UserControl1 temp_Control = new UserControl1();
+            UserControl1 temp_Control = new UserControl1(1);
             list_structure temp_list_structure = new list_structure();
             while (errorlist[i] != "CONFIG")
             {
@@ -68,10 +68,10 @@ namespace WpfApp5
                         temp_list_structure.ID = Convert.ToInt16(errorlist[i]);
                         i++;
                         temp_list_structure.type = Convert.ToInt16(errorlist[i]);
-                        type= Convert.ToInt16(errorlist[i]);
+                        //type= Convert.ToInt16(errorlist[i]);
                         i++;
                         byte_num = 0;
-                        temp_Control = new UserControl1();
+                        temp_Control = new UserControl1(temp_list_structure.type);
                         temp_Control.CAN.Content = errorlist[i];
                         Errorlist_CAN.Add(temp_list_structure);
                         next_can = false;
@@ -105,6 +105,7 @@ namespace WpfApp5
                             break;
                         }
                     }
+                    
                     switch (byte_num)
                     {
                         case 0:
@@ -112,7 +113,6 @@ namespace WpfApp5
                             if (errorlist[i]!="")
                             {
                                 temp_Control.CAN_byte1_title.Content= errorlist[i];
-                                temp_Control.Add_byte(byte_num,type);
                             }
                             i++;
                             break;
@@ -121,7 +121,6 @@ namespace WpfApp5
                             if (errorlist[i] != "")
                             {
                                 temp_Control.CAN_byte2_title.Content = errorlist[i];
-                                temp_Control.Add_byte(byte_num, type);
                             }
                             i++;
                             break;
@@ -130,7 +129,6 @@ namespace WpfApp5
                             if (errorlist[i] != "")
                             {
                                 temp_Control.CAN_byte3_title.Content = errorlist[i];
-                                temp_Control.Add_byte(byte_num, type);
                             }
                             i++;
                             break;
@@ -139,7 +137,6 @@ namespace WpfApp5
                             if (errorlist[i] != "")
                             {
                                 temp_Control.CAN_byte4_title.Content = errorlist[i];
-                                temp_Control.Add_byte(byte_num, type);
                             }
                             i++;
                             break;
@@ -148,7 +145,6 @@ namespace WpfApp5
                             if (errorlist[i] != "")
                             {
                                 temp_Control.CAN_byte5_title.Content = errorlist[i];
-                                temp_Control.Add_byte(byte_num, type);
                             }
                             i++;
                             break;
@@ -157,7 +153,6 @@ namespace WpfApp5
                             if (errorlist[i] != "")
                             {
                                 temp_Control.CAN_byte6_title.Content = errorlist[i];
-                                temp_Control.Add_byte(byte_num, type);
                             }
                             i++;
                             break;
@@ -166,7 +161,6 @@ namespace WpfApp5
                             if (errorlist[i] != "")
                             {
                                 temp_Control.CAN_byte7_title.Content = errorlist[i];
-                                temp_Control.Add_byte(byte_num, type);
                             }
                             i++;
                             break;
@@ -175,52 +169,44 @@ namespace WpfApp5
                             if (errorlist[i] != "")
                             {
                                 temp_Control.CAN_byte8_title.Content = errorlist[i];
-                                temp_Control.Add_byte(byte_num, type);
                             }
                             i++;
                             break;
                     }
+                    
                     while (next_byte == false)
                     {
                         switch (byte_num)
                         {
                             case 0:
-                                temp_Control.CAN_byte1_title.Foreground = new SolidColorBrush(Colors.Black);
                                 temp_Control.Add_new(errorlist[i], 0);
                                 i++;
                                 break;
                             case 1:
-                                temp_Control.CAN_byte2_title.Foreground = new SolidColorBrush(Colors.Black);
                                 temp_Control.Add_new(errorlist[i], 1);
                                 i++;
                                 break;
                             case 2:
-                                temp_Control.CAN_byte3_title.Foreground = new SolidColorBrush(Colors.Black);
                                 temp_Control.Add_new(errorlist[i], 2);
                                 i++;
                                 break;
                             case 3:
-                                temp_Control.CAN_byte4_title.Foreground = new SolidColorBrush(Colors.Black);
                                 temp_Control.Add_new(errorlist[i], 3);
                                 i++;
                                 break;
                             case 4:
-                                temp_Control.CAN_byte5_title.Foreground = new SolidColorBrush(Colors.Black);
                                 temp_Control.Add_new(errorlist[i], 4);
                                 i++;
                                 break;
                             case 5:
-                                temp_Control.CAN_byte6_title.Foreground = new SolidColorBrush(Colors.Black);
                                 temp_Control.Add_new(errorlist[i], 5);
                                 i++;
                                 break;
                             case 6:
-                                temp_Control.CAN_byte7_title.Foreground = new SolidColorBrush(Colors.Black);
                                 temp_Control.Add_new(errorlist[i], 6);
                                 i++;
                                 break;
                             case 7:
-                                temp_Control.CAN_byte8_title.Foreground = new SolidColorBrush(Colors.Black);
                                 temp_Control.Add_new(errorlist[i], 7);
                                 i++;
                                 break;
